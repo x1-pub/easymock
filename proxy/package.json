@@ -1,0 +1,20 @@
+{
+  "name": "proxy",
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "MIT",
+  "scripts": {
+    "dev": "cross-env NODE_ENV=development nodemon ./index.js",
+    "start": "NODE_ENV=production pm2 start index.js --name easymock_proxy -i 2"
+  },
+  "dependencies": {
+    "chalk": "^5.4.1",
+    "http-proxy": "^1.18.1"
+  },
+  "devDependencies": {
+    "cross-env": "^7.0.3",
+    "nodemon": "^3.1.10",
+    "pm2": "^6.0.5"
+  },
+  "type": "module"
+}

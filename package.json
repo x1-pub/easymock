@@ -1,0 +1,27 @@
+{
+  "name": "easy-mock",
+  "version": "1.0.0",
+  "main": "index.js",
+  "author": "liurx <13131451002@163.com>",
+  "license": "MIT",
+  "scripts": {
+    "commit": "cz-customizable",
+    "prepare": "husky install",
+    "lint": "lint-staged"
+  },
+  "lint-staged": {
+    "web/src/**/*.{js,jsx}": "eslint --fix",
+    "server/src/**/*.js": "eslint --fix"
+  },
+  "devDependencies": {
+    "@commitlint/cli": "^17.1.2",
+    "commitlint-config-cz": "^0.13.3",
+    "commitlint-config-git-commit-emoji": "^1.0.0",
+    "cz-customizable": "^7.0.0",
+    "husky": "^8.0.0",
+    "lint-staged": "^15.5.1"
+  },
+  "dependencies": {
+    "eslint": "^7.32.0"
+  }
+}

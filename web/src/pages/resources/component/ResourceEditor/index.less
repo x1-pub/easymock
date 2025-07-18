@@ -1,0 +1,240 @@
+.component-resource-editor {
+  padding: 0 20px 20px 20px;
+  .header {
+    height: 34px;
+    position: sticky;
+    top: 0;
+    background-color: #FFF;
+    padding-top: 15px;
+    z-index: 100;
+    .close {
+      width: 34px;
+      height: 34px;
+      float: right;
+      box-sizing: border-box;
+      padding: 9px;
+      &:hover {
+        background-color: rgba(0,0,0,.1);
+        border-radius: 50%;
+        cursor: pointer;
+        animation-name: bg;
+        animation-duration: .1s;
+        animation-fill-mode: forwards;
+      }
+      img {
+        float: right;
+      }
+    }
+  }
+
+  .form {
+    & > div {
+      margin-bottom: 20px;
+      p {
+        font-size: 0.9rem;
+        font-weight: 700;
+        margin: 14px 0 7px 0;
+      }
+      h5 {
+        margin: 5px 0 8px 0;
+        font-size: 10px;
+        line-height: 1.5em;
+        color: #8c8c8c;
+        font-weight: 200;
+      }
+      input {
+        appearance: none;
+        transition: all .1s ease-in;
+        box-sizing: border-box;
+        padding: 5px 10px;
+        font-size: 0.8rem;
+        box-shadow: none;
+        border-radius: 6px;
+        border: 2px solid #eee;
+        background: #eee;
+        font-family: Menlo,monospace;
+        color: #333;
+        width: 100%;
+        &:focus {
+          outline: none;
+          box-shadow: 0px 0px 0px 2px #fff,0px 0px 0px 4px #2196f3;
+        }
+        &:hover, &:focus {
+          & ~ .delete {
+            opacity: 1;
+          }
+        }
+      }
+
+      .delete {
+        width: 17px;
+        height: 17px;
+        vertical-align: middle;
+        background-color: rgba(0,0,0,.15);
+        border-radius: 50%;
+        padding: 4px;
+        margin-left: 8px;
+        transition: all 0.1s;
+        cursor: pointer;
+        opacity: 0;
+      }
+      .delete:hover {
+        opacity: 1;
+        transform: scale(1.2);
+      }
+
+      textarea {
+        width: 100%;
+        transition: all .1s ease-in;
+        box-sizing: border-box;
+        padding: 5px 10px;
+        font-size: 14px;
+        box-shadow: none;
+        border-radius: 6px;
+        border: 2px solid #eee;
+        background: #eee;
+        font-family: Menlo,monospace;
+        color: #333;
+      }
+      textarea:focus {
+        outline: none;
+        box-shadow: 0px 0px 0px 2px #fff,0px 0px 0px 4px #2196f3;
+      }
+
+      .endpoint {
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+        gap: 7px;
+        margin-bottom: 5px;
+
+        .cantrol {
+          border-radius: 9px;
+          width: 32px;
+          text-align: center;
+          font-size: 10px;
+          cursor: pointer;
+        }
+        .method {
+          font-weight: 700;
+          color: #3cb371;
+          font-size: 14px;
+        }
+        .url {
+          font-size: 14px;
+          color: #bfbfbf;
+        }
+      }
+
+      .form-schema-select {
+        margin: 10px 0;
+        &:hover {
+          .delete {
+            opacity: 1;
+          }
+        }
+        select {
+          margin-left: 5px;
+          box-sizing: border-box;
+          padding: 5px 10px;
+          font-size: 14px;
+          border-radius: 6px;
+          border: none;
+          background: #eee;
+          color: #333;
+          font-family: Menlo,monospace;
+          outline: none;
+          transition: all .1s ease-in;
+          appearance:none;
+          -moz-appearance:none; /* Firefox */
+          -webkit-appearance:none; /* Safari 和 Chrome */
+          &:hover, &:focus {
+            & ~ .delete {
+              opacity: 1;
+            }
+          }
+        }
+        select:focus {
+          border: none;
+          box-shadow: 0px 0px 0px 2px #fff,0px 0px 0px 4px #2196f3;
+        }
+      }
+
+      pre {
+        position: relative;
+        padding: 10px;
+        border: 2px solid #ddd;
+        background: #fff;
+        border-radius: 4px;
+        font-size: 14px;
+        line-height: 13px;
+        font-weight: 700;
+        color: #333;
+        overflow: auto;
+      }
+      pre::after {
+        content: "范例";
+        position: absolute;
+        top: 7px;
+        right: 10px;
+        text-transform: uppercase;
+        background-color: #ddd;
+        color: #333;
+        font-weight: 700;
+        font-family: arial;
+        font-size: 12px;
+        padding: 4px 14px;
+        border-radius: 4px;
+      }
+    }
+  }
+
+  .add {
+    width: 17px;
+    height: 17px;
+    vertical-align: middle;
+    background-color: rgba(0,0,0,.15);
+    border-radius: 50%;
+    padding: 4px;
+    transition: all 0.1s;
+    cursor: pointer;
+  }
+  .add:hover {
+    transform: scale(1.2);
+  }
+
+  .action {
+    position: sticky;
+    bottom: 0;
+    background-color: #FFF;
+    padding-bottom: 20px;
+    margin-top: 25px;
+    display: flex;
+    justify-content: space-between;
+    button {
+      width: 48%;
+      margin-right: 5px;
+      border-radius: 6px;
+      padding: 8px 12px;
+      font-size: 0.8rem;
+      font-weight: 700;
+      border: none;
+      background-color: transparent;
+      cursor: pointer;
+    }
+
+    > :first-child {
+      background-color: #2196f3;
+      color: #FFF;
+    }
+
+    > :last-child:hover {
+      transition: all .1s ease-in-out;
+      background-color: rgba(0,0,0,.1);
+    }
+  }
+}
+
+.textarea {
+  resize: vertical;
+}

@@ -1,0 +1,121 @@
+.menutree {
+  // width: 500px;
+  padding-left: 52px;
+  overflow-y: hidden;
+  .group {
+    margin: 20px 0;
+    .item {
+      width: 200px;
+      height: 60px;
+      border: 2px solid #bfbfbf;
+      border-radius: 10px;
+      box-sizing: border-box;
+      position: relative;
+
+      &.actived {
+        border: 2px solid #1890ff;
+      }
+
+      .title {
+        text-align: center;
+        color: #1890ff;
+        font-size: 16px;
+        margin: 3px 0;
+        transition: all 0.6s;
+        a {
+          text-decoration: none;
+        }
+      }
+      .title.actived {
+        font-size: 10px;
+        margin: 0;
+        transition: all 0.6s;
+      }
+
+      .handler {
+        display: none;
+        justify-content: center;
+        span {
+          font-size: 10px;
+          text-align: center;
+          padding: 0 4px;
+          margin: 2px 10px;
+          background-color: #f0f0f0;
+          border-radius: 3px;
+          cursor: pointer;
+        }
+        span:last-child {
+          color: red;
+          background-color: transparent;
+        }
+      }
+      .handler.actived {
+        display: flex;
+      }
+
+      .x-right-line {
+        display: inline-block;
+        width: 15px;
+        border-bottom: 2px solid #bfbfbf;
+        position: absolute;
+        right: -17px;
+        top: 28px;
+      }
+
+      .x-left-line {
+        display: inline-block;
+        width: 15px;
+        border-bottom: 2px solid #bfbfbf;
+        position: absolute;
+        left: -17px;
+        top: 28px;
+      }
+
+      .y-right-line {
+        display: inline-block;
+        height: 81px;
+        border-left: 2px solid #bfbfbf;
+        position: absolute;
+        right: -18px;
+        top: 29px;
+      }
+
+      .y-left-line {
+        display: inline-block;
+        border-left: 2px solid #bfbfbf;
+        position: absolute;
+        left: -18px;
+        top: 29px;
+      }
+
+      .x-left-line__long {
+        display: inline-block;
+        height: 100vh;
+        border-left: 2px solid #bfbfbf;
+        position: absolute;
+        left: -18px;
+        bottom: 26px;
+      }
+
+      img {
+        width: 16px;
+        height: 16px;
+        position: absolute;
+        right: -9px;
+        bottom: 20px;
+        cursor: pointer;
+        display: none;
+      }
+
+      img.show {
+        display: inline-block;
+      }
+    }
+    .group {
+      margin-left: 230px;
+      .group img {
+        display: none;
+      }
+    }
+  }
+}

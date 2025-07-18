@@ -1,0 +1,107 @@
+.input-range {
+  margin: 4px 0 2px;
+  .range {
+    width: 170px;
+    height: 18px;
+    background-color: #f0f0f0;
+    border-radius: 5px;
+    position: relative;
+    margin: 0 15px;
+    cursor: pointer;
+    &:hover {
+      .line {
+        display: block;
+      }
+      .num {
+        display: block;
+      }
+    }
+
+    .bg {
+      height: 18px;
+      position: absolute;
+      left: 0;
+      background-color: #1890ff;
+      border-radius: 5px;
+      transition: width 1s;
+    }
+
+    .line {
+      display: none;
+      border-left: 2px solid #595959;
+      height: 20px;
+      position: absolute;
+    }
+
+    .num {
+      display: none;
+      position: absolute;
+      top: -18px;
+      font-size: 12px;
+      color: #FFF;
+      padding: 0 3px;
+      background: #595959;
+      border-radius: 7px;
+    }
+
+    .v-c {
+      position: absolute;
+      font-size: 14px;
+      left: 76px;
+      color: #595959;
+    }
+  }
+  // input[type="range"] {
+  //   -webkit-appearance: none;
+  // }
+
+  // // 控制条轨迹
+  // input[type='range']::-webkit-slider-runnable-track{
+  //   background-color: #eee;
+  // }
+  // input[type='range']::-moz-range-track{
+  //   background-color: #eee;
+  // }
+  // input[type="range"]::-ms-track{
+  //   color:transparent;
+  //   background-color: #eee;
+  // }
+
+  // // 控制的拖拽按
+  // input[type='range']::-webkit-slider-thumb {
+  //   -webkit-appearance: none;
+  //   border: 5px solid #fff;
+  //   height: 14px;
+  //   width: 14px;
+  //   border-radius: 8px;
+  //   background: #1ba1e2;
+  //   cursor: pointer;
+  // }
+  // input[type='range']::-moz-range-thumb {
+  //     border: 3px solid #fff;
+  //     height: 7px;
+  //     width: 7px;
+  //     border-radius: 8px;
+  //     background: #1ba1e2;
+  //     cursor: pointer;
+  // }
+  // input[type='range']::-ms-thumb {
+  //   border: 3px solid #fff;
+  //   height: 7px;
+  //   width: 7px;
+  //   border-radius: 8px;
+  //   background: #1ba1e2;
+  //   cursor: pointer;
+  // }
+
+  // 高亮选中区域
+  // input[type='range']::-webkit-slider-runnable-track{
+  //   background:linear-gradient(to right, #1ab1e2 0%, #1ab1e2 80%,#eee 80%, #eee);
+  // }
+  // input[type='range']::-moz-range-track{
+  //     background:linear-gradient(to right, #1ab1e2 0%, #1ab1e2 80%,#eee 80%, #eee);
+  // }
+  // input[type='range']::-ms-fill-lower{
+  //     background:linear-gradient(to right, #1ab1e2 0%, #1ab1e2 80%,#eee 80%, #eee);
+  // }
+}

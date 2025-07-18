@@ -1,0 +1,82 @@
+.component-dataeditor {
+  padding: 0 20px 20px 20px;
+  .header {
+    height: 34px;
+    position: sticky;
+    top: 0;
+    background-color: #FFF;
+    padding-top: 15px;
+    padding-bottom: 5px;
+    .close {
+      width: 34px;
+      height: 34px;
+      float: right;
+      box-sizing: border-box;
+      padding: 9px;
+      &:hover {
+        background-color: rgba(0,0,0,.1);
+        border-radius: 50%;
+        cursor: pointer;
+        animation-name: bg;
+        animation-duration: .1s;
+        animation-fill-mode: forwards;
+      }
+      img {
+        float: right;
+      }
+    }
+  }
+
+  p {
+    margin-top: 5px;
+    font-size: 12px;
+    line-height: 1.5em;
+  }
+
+  textarea {
+    width: 100%;
+    transition: all .1s ease-in;
+    box-sizing: border-box;
+    padding: 5px 10px;
+    font-size: 14px;
+    box-shadow: none;
+    border-radius: 6px;
+    border: 2px solid #eee;
+    background: #eee;
+    font-family: Menlo,monospace;
+    color: #333;
+    height: calc(100vh - 8vh - 275px);
+    &::-webkit-scrollbar { width: 0 !important }
+  }
+  textarea:focus {
+    outline: none;
+    // box-shadow: 0px 0px 0px 2px #fff,0px 0px 0px 4px #2196f3;
+  }
+
+  .action {
+    margin-top: 25px;
+    display: flex;
+    justify-content: space-between;
+    button {
+      width: 48%;
+      margin-right: 5px;
+      border-radius: 6px;
+      padding: 8px 12px;
+      font-size: 0.8rem;
+      font-weight: 700;
+      border: none;
+      background-color: transparent;
+      cursor: pointer;
+    }
+
+    > :first-child {
+      background-color: #2196f3;
+      color: #FFF;
+    }
+
+    > :last-child:hover {
+      transition: all .1s ease-in-out;
+      background-color: rgba(0,0,0,.1);
+    }
+  }
+}
